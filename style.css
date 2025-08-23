@@ -183,13 +183,17 @@ body {
     height: auto;
 }
 .section-quote h1 {
-    font-family: var(--font-1);
+    font-family: var(--font-title);
+    padding: 15px;
     font-weight: 400;
     font-style: italic;
-    font-size: 30px;
-    color: var(--color-1);
-    padding: 15px;
-    margin: 0;
+    font-size: 45px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to right, #d8bff8, #e6ccff, #c4aeda, #e6ccff, #d8bff8);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 .section-main h2 {
     top: 18%;
