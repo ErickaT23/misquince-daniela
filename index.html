@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Quince Daniela</title>
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mis Quince Daniela">
+    <meta property="og:description" content="Te invito a mis quince, con amor Daniela.">
+    <meta property="og:image" content="https://i.postimg.cc/5NLbGpWs/1000528082.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preload" href="/imagenes/sintillo.png" as="image">
+     <!-- Preconnect and Load Fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300..700;1,300..700&amp;family=Imperial+Script&amp;display=swap" rel="stylesheet">
+     <script src="https://cdn.lordicon.com/lordicon.js"></script>   
+     <script type="module" src="/database.js"></script>
+</head>
+<body>
+    <!-- Sobre de la Invitación -->
+    <div id="envelope">
+        <div id="envelope-top"></div>
+        <div id="seal">
+            <h2 class="fade-in-element visible" style="transition-delay: 0s;">Mis Quince     Daniela</h2>
+        </div>
+        <div id="envelope-bottom"></div>
+    </div>
+    <!-- Contenido de la Invitación -->
+    <div id="invitacion">
+        <!-- Portada con foto y texto encima -->
+        <!--Header con sintillo-->
+        <header class="sintillo">
+    <h1>Mis Quince</h1>
+    <h2>Daniela</h2>
+        </header>
+
+    <!-- Sección de Foto -->
+        <div class="section-main fade-in-element">
+    <img src="/imagenes/V1.jpg" alt="Foto de la quinceañera" width="100%" loading="lazy">
+        </div>
+        <div class="section-cerezo00"></div>   
+        <!-- Contador de Fecha Regresiva -->
+        <div class="section-countdown fade-in-element">
+            <h1>¡Están invitados!</h1>
+            <p>Nos encanta que sean parte de este momento tan especial para nosotros.</p>
+            <h2>04 . 10 . 2025</h2>
+            <div id="contador">
+                <div class="countdown-circle">
+                    <span id="dias">00</span>
+                    <span>días</span>
+                </div>
+                <div class="countdown-circle">
+                    <span id="horas">00</span>
+                    <span>horas</span>
+                </div>
+                <div class="countdown-circle">
+                    <span id="minutos">00</span>
+                    <span>minutos</span>
+                </div>
+                <div class="countdown-circle">
+                    <span id="segundos">00</span>
+                    <span>segundos</span>
+                </div>
+            </div>
+        </div>  
+        <!--div cerezo-->
+        <div class="section-cerezo0"></div>   
+         <!-- Bendición de Padres -->
+         <div class="section-b fade-in-element">
+            <p>Con la bendición de Dios y de mis padres</p>
+            <h1>Carlos Gularte</h1>
+            <h2>&</h2>
+            <h1>Gabriela Calvillo</h1>
+        </div>
+           <!-- Nombre de Invitados y Cantidad de Pases -->
+           <div class="section-guest fade-in-element">
+            <h1>Los invitamos con mucho cariño</h1>
+            <h2 id="nombreInvitado"></h2>
+            <h3 id="cantidadPases"></h3>
+        </div>
+        <!-- Confirmación -->
+        <div class="section fade-in-element">
+            <h3>Confirmar Asistencia</h3>
+            <lord-icon
+              src="https://cdn.lordicon.com/fjvfsqea.json"
+              trigger="loop"
+              delay="2000"
+              stroke="light"
+              colors="primary:#b38fcc,secondary:#9273ab"
+              style="width:200px;height:200px">
+            </lord-icon>
+            <p>Para nosotros es muy importante que confirmes tu asistencia lo antes posible, o bien indicarnos si no podrá acompañarnos.</p>
+            <button onclick="confirmarAsistencia()">Confirmar</button>
+        </div>
+        <!--div cerezo-->
+        <div class="section-cerezo000"></div>   
+        <!-- Itinerario -->
+        <div class="section fade-in-element">
+          <!--card ceremonia-->
+            <div class="ceremony fade-in-element">
+                <lord-icon
+                 src="https://cdn.lordicon.com/jqmftaai.json"
+                 trigger="loop"
+                 delay="2000"
+                 stroke="light"
+                 colors="primary:#b38fcc,secondary:#9273ab"
+                 style="width:200px;height:200px">
+               </lord-icon>
+               <h2>Ceremonia</h2>
+               <p>Cristo Rey</p>
+               <div class="details">
+                   <div class="time-location">
+                     <span class="date">04 Octubre</span>
+                     <span class="separator">|</span>
+                     <span class="time">17:00 hrs</span>
+                  </div>
+                     <p>3A Calle, Zona 15, Ciudad de Guatemala </p>
+                     <button type="button" class="direction-button" onclick="elegirAplicacion()">Cómo llegar</button>
+               </div>
+            </div>
+         <!--card fiesta-->
+           <div class="party fade-in-element">
+            <lord-icon
+             src="https://cdn.lordicon.com/nsgykrsg.json"
+             trigger="loop"
+             delay="2000"
+             stroke="light"
+             colors="primary:#b38fcc,secondary:#9273ab"
+             style="width:200px;height:200px">
+            </lord-icon>
+           <h2>Fiesta</h2>
+           <p>Hotel Wyndham Garden Guatemala City</p>
+           <div class="details">
+            <div class="time-location">
+                <span class="date">04 Octubre</span>
+                <span class="separator">|</span>
+                <span class="time">19:00 hrs</span>
+            </div>
+        <p>1 Avenida 12-46, Zona 10, Ciudad de Guatemala</p>
+        <button type="button" class="direction-button" onclick="elegirAplicacionOtraDireccion()">Cómo llegar</button>
+           </div>
+           </div>
+        </div>
+        <!--div cerezo-->
+        <div class="section-cerezo"></div>
+        <!-- Regalos -->
+        <div class="section-gifts fade-in-element">
+            <lord-icon class="icon-gift"
+            src="https://cdn.lordicon.com/kezeezyg.json"
+            trigger="loop"
+            delay="2000"
+            stroke="light"
+            colors="primary:#b38fcc,secondary:#9273ab"
+            style="width:200px;height:200px">
+            </lord-icon>
+            <h2>Lluvia de Sobres</h2>
+            <p>Lo que más queremos es compartir contigo nuestro gran día, pero agradecemos mucho el gesto de un obsequio. Tendremos un cofre en la entrada para que puedas dejar tu sobre con efectivo.</p>
+        </div>
+         <!--dresscode-->
+         <div class="section fade-in-element">
+            <h2>Dress Code</h2>
+            <lord-icon
+            src="https://cdn.lordicon.com/okgbpdra.json"
+            trigger="loop"
+            delay="2000"
+            stroke="light"
+            colors="primary:#b38fcc,secondary:#9273ab"
+            style="width:200px;height:200px">
+        </lord-icon>
+            <p>Formal con tenis, los colores lila y morados están reservados completamente para la quinceañera </p>
+        </div>
+        <!--div cerezo-->
+        <div class="section-cerezo1"></div>   
+       <!-- Galería de Fotos -->
+       <div class="section fade-in-element">
+           <h2>Galería</h2>
+           <div class="galeria">
+             <img src="/Imagenes/H1.jpg" alt="Foto 1" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
+             <img src="/imagenes/H2.jpg" alt="Foto 2" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
+             <img src="/imagenes/H3.jpg" alt="Foto 3" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
+           </div>
+        </div>
+        <!-- Modal para visualización de fotos -->
+        <div id="photo-modal" class="photo-modal" onclick="closeModal(event)">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="main-photo-modal" src="" alt="Imagen ampliada">
+        </div>
+        <!-- Buenos deseos -->
+        <section id="wishes-section" class="fade-in-element">
+    <h2>Buenos Deseos</h2>
+    <button id="show-wishes">Ver Buenos Deseos</button>
+    <div id="wishes-container" class="hidden"></div>
+  
+    <button id="send-wish">Enviar Buenos Deseos</button>
+    <div id="wish-form" class="hidden">
+      <input id="wish-name" type="text" placeholder="Tu nombre">
+      <textarea id="wish-message" placeholder="Tu mensaje"></textarea>
+      <button id="submit-wish">Enviar</button>
+    </div>
+        </section>
+        <!-- Imagen -->
+        <div class="section fade-in-element">
+            <img src="/imagenes/V2.jpg" alt="Foto de la quinceañera" width="100%" loading="lazy">
+        </div>
+        <!-- frase final-->
+        <div class="section-quote fade-in-element">
+            <h1>Con tu presencia este día será aun mas especial</h1>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <div class="section-social-icons fade-in-element">
+                <a href="https://www.facebook.com/thetwodesign" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/thetwodesign/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/50236011737" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <div class="section-logo">
+                <img src="/Imagenes/2.png" alt="Logo" width="100" loading="lazy">
+            </div>
+        </footer>
+    </div>
+    <script src="/script.js"></script>
+</body>
+</html>
+
+
+
