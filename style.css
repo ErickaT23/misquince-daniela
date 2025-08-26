@@ -72,7 +72,7 @@ body {
 }
 #seal h2 {
     margin: 0;
-    font-size: 40px;
+    font-size: 35px;
     font-family: var(--font-title);
     font-weight: 400;
     font-style: italic;
@@ -167,9 +167,6 @@ body {
     background: linear-gradient(to right, #d8bff8, #e6ccff, #f3e6ff, #e6ccff, #d8bff8);
     -webkit-background-clip: text;
     color: transparent;
-}
-.section-filter{
-    background-color: #f8eef3ca;
 }
 .section-main {
     position: relative;
@@ -452,7 +449,7 @@ body {
     font-weight: 400;
 }
   
-.section h2, .section-gifts h2, .section h3{
+.section h2, .section-gifts h2, .section h3, .section-filter h2{
     font-family: var(--font-title);
     padding: 15px;
     font-weight: 400;
@@ -727,3 +724,45 @@ footer {
     display: none;
   }
 
+  .qr-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    margin: 10px 0 24px;
+  }
+  
+  .qr-container img {
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    max-width: 90%;
+    height: auto;
+  }
+  
+  .upload-btn {
+    background-color: var(--color-2);
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-family: var(--font-text);
+    font-style: italic;
+    font-size: 1.1em;
+    transition: transform .15s ease, box-shadow .15s ease, background-color .2s;
+  }
+  
+  .upload-btn:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    background-color: transparent;
+  }
+  
+  .hashtag {
+    font-size: 42px;
+    font-family: var(--font-title);
+    background: linear-gradient(to right, #d8bff8, #e6ccff, #c4aeda, #e6ccff, #d8bff8);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin: -6px 0 8px;
+  }
+  

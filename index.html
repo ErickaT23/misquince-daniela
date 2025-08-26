@@ -24,7 +24,7 @@
     <div id="envelope">
         <div id="envelope-top"></div>
         <div id="seal">
-            <h2 class="fade-in-element visible" style="transition-delay: 0s;">Mis Quince     Daniela</h2>
+            <h2 class="fade-in-element visible" style="transition-delay: 0s;">Mis XV     Daniela</h2>
         </div>
         <div id="envelope-bottom"></div>
     </div>
@@ -33,7 +33,7 @@
         <!-- Portada con foto y texto encima -->
         <!--Header con sintillo-->
         <header class="sintillo">
-    <h1>Mis Quince</h1>
+    <h1>Mis XV</h1>
     <h2>Daniela</h2>
         </header>
 
@@ -175,35 +175,69 @@
         <!--div cerezo-->
         <div class="section-cerezo1"></div>   
        <!-- Galería de Fotos -->
-       <div class="section fade-in-element">
-           <h2>Galería</h2>
-           <div class="galeria">
-             <img src="/Imagenes/H1.jpg" alt="Foto 1" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
-             <img src="/imagenes/H2.jpg" alt="Foto 2" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
-             <img src="/imagenes/H3.jpg" alt="Foto 3" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
-           </div>
-        </div>
-        <!-- Modal para visualización de fotos -->
-        <div id="photo-modal" class="photo-modal" onclick="closeModal(event)">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <img id="main-photo-modal" src="" alt="Imagen ampliada">
-        </div>
         <!-- Buenos deseos -->
-        <section id="wishes-section" class="fade-in-element">
+        <!-- Buenos deseos -->
+<section id="wishes-section" class="fade-in-element">
     <h2>Buenos Deseos</h2>
-    <button id="show-wishes">Ver Buenos Deseos</button>
-    <div id="wishes-container" class="hidden"></div>
-  
-    <button id="send-wish">Enviar Buenos Deseos</button>
-    <div id="wish-form" class="hidden">
+    <div id="wish-form">
       <input id="wish-name" type="text" placeholder="Tu nombre">
       <textarea id="wish-message" placeholder="Tu mensaje"></textarea>
       <button id="submit-wish">Enviar</button>
     </div>
-        </section>
+  </section>
+    
+        <!-- Playlist -->
+<div class="section fade-in-element">
+    <h2>Playlist</h2>
+    <lord-icon
+      src="https://cdn.lordicon.com/vvlnxtgv.json"
+      trigger="loop"
+      delay="2000"
+      stroke="light"
+      colors="primary:#b38fcc,secondary:#9273ab"
+      style="width:200px;height:200px">
+    </lord-icon>
+    <p>Ayúdame a armar la playlist con tus canciones favoritas e inolvidables para mi fiesta.</p>
+    <button
+      onclick="window.open('https://open.spotify.com/playlist/2ZAQ3vS6oqffjbTb05R5Zr?si=c8b040c6d83341c3&pt=ca74b026231d6523883c81ec293db06b', '_blank', 'noopener')"
+    >
+      Abrir playlist en Spotify
+    </button>
+  </div>
+  
+  <!-- Recuerdos / Álbum Digital -->
+<div class="section-filter fade-in-element">
+    <h2>¡Hagamos las memorias eternas!</h2>
+  
+    <lord-icon
+      src="https://cdn.lordicon.com/wsaaegar.json"
+      trigger="loop"
+      delay="2000"
+      stroke="light"
+      colors="primary:#b38fcc,secondary:#9273ab"
+      style="width:200px;height:200px">
+    </lord-icon>
+  
+    <p>Etiqueta tus fotos en Instagram con</p>
+    <h1 class="hashtag">#misxvdaniela</h1>
+  
+    <p>También puedes subir tus fotos al álbum digital. Escanea el código QR o usa el botón:</p>
+  
+    <div class="qr-container">
+      <!-- Reemplaza la ruta por tu imagen QR -->
+      <img src="/imagenes/QR-Daniela.png" alt="Escanea el QR para subir fotos" width="240" height="240" loading="lazy">
+      <a class="upload-btn"
+         href="https://drive.google.com/drive/folders/1waiW90Tukb_rJGXBzgiRVf50ESAYrJzX?usp=drive_link"
+         target="_blank" rel="noopener">
+         Subir fotos al Álbum
+      </a>
+    </div>
+  </div>
+  
+  
         <!-- Imagen -->
         <div class="section fade-in-element">
-            <img src="/imagenes/V2.jpg" alt="Foto de la quinceañera" width="100%" loading="lazy">
+            <img src="/imagenes/H2.jpg" alt="Foto de la quinceañera" width="100%" loading="lazy">
         </div>
         <!-- frase final-->
         <div class="section-quote fade-in-element">

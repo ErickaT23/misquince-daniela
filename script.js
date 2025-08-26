@@ -181,73 +181,40 @@ function confirmarAsistencia() {
       
 //Funcion para abrir waze o maps
 //iglesia
+// Iglesia
 function elegirAplicacion() {
-    const enlaceGoogleMaps = 'https://maps.app.goo.gl/PdugPMHiWNougzhN7';
-    const enlaceWaze = 'https://ul.waze.com/ul?venue_id=176619666.1766196661.2132634&overview=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location';
-
-    // Intentar abrir Google Maps primero
-    window.open(enlaceGoogleMaps, '_blank');
-    
-    // Intentar abrir Waze (en caso de que Google Maps no esté disponible)
-    setTimeout(() => {
-        window.open(enlaceWaze, '_blank');
-    }, 1000); // Retraso para permitir que el primer enlace se abra si está disponible
+  const enlaceWaze = 'https://ul.waze.com/ul?venue_id=176619666.1766196661.2132634&overview=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location';
+  window.open(enlaceWaze, '_blank');
 }
-//fiesta
+
+// Fiesta
 function elegirAplicacionOtraDireccion() {
-    const enlaceGoogleMaps = 'https://maps.app.goo.gl/c8jAAN9pL88YQffe9';
-    const enlaceWaze = 'https://ul.waze.com/ul?venue_id=176619666.1766065588.26091657&overview=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location';
-
-    // Intentar abrir Google Maps primero
-    window.open(enlaceGoogleMaps, '_blank');
-
-    // Intentar abrir Waze (en caso de que Google Maps no esté disponible)
-    setTimeout(() => {
-        window.open(enlaceWaze, '_blank');
-    }, 1000); // Retraso para permitir que el primer enlace se abra si está disponible
+  const enlaceWaze = 'https://ul.waze.com/ul?venue_id=176619666.1766065588.26091657&overview=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location';
+  window.open(enlaceWaze, '_blank');
 }
-function mostrarCuenta() {
-    const info = document.getElementById("info-cuenta");
-    if (info.style.display === "none") {
-        info.style.display = "block";
-    } else {
-        info.style.display = "none";
-    }
-}
+
 document.addEventListener('DOMContentLoaded', function () {
-    // Mostrar/Ocultar buenos deseos
-    document.getElementById('show-wishes').addEventListener('click', function () {
-      window.toggleWishes();
-    });
-  
-    // Mostrar formulario de envío
-    document.getElementById('send-wish').addEventListener('click', function () {
-      const form = document.getElementById('wish-form');
-      form.classList.toggle('hidden');
-    });
-  
-    // Enviar mensaje
-    document.getElementById('submit-wish').addEventListener('click', function () {
-      const nombre = document.getElementById('wish-name').value.trim();
-      const mensaje = document.getElementById('wish-message').value.trim();
-  
-      if (!nombre || !mensaje) {
-        alert('Por favor, completa ambos campos.');
-        return;
-      }
-  
-      window.guardarDeseo(nombre, mensaje)
-        .then(() => {
-          alert('¡Gracias por tus buenos deseos!');
-          document.getElementById('wish-name').value = '';
-          document.getElementById('wish-message').value = '';
-          document.getElementById('wish-form').classList.add('hidden');
-          document.getElementById('wishes-container').dataset.loaded = 'false';
-        })
-        .catch((error) => {
-          console.error('Error al guardar el deseo:', error);
-          alert('Hubo un problema al enviar tu mensaje.');
-        });
-    });
+  // Enviar mensaje
+  document.getElementById('submit-wish').addEventListener('click', function () {
+    const nombre = document.getElementById('wish-name').value.trim();
+    const mensaje = document.getElementById('wish-message').value.trim();
+
+    if (!nombre || !mensaje) {
+      alert('Por favor, completa ambos campos.');
+      return;
+    }
+
+    window.guardarDeseo(nombre, mensaje)
+      .then(() => {
+        alert('¡Gracias por enviar tu deseo a Daniela! 💖');
+        document.getElementById('wish-name').value = '';
+        document.getElementById('wish-message').value = '';
+      })
+      .catch((error) => {
+        console.error('Error al guardar el deseo:', error);
+        alert('Hubo un problema al enviar tu mensaje.');
+      });
   });
+});
+
   
