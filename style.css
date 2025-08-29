@@ -87,87 +87,51 @@ body {
     width: 100%;
     box-sizing: border-box;
 }
-/* Portada con texto sobre imagen */
+/* Cintillo con fondo */
 .sintillo {
-    position: relative;
     width: 100%;
-    height: 300px;              /* alto del cintillo */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    margin-top: -50px;
-    margin-bottom: -50px;
-    z-index: 2;
-}
-.sintillo::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('/Imagenes/sintillo.png');  /* ← AQUÍ va tu imagen */
+    height: 200px; /* ajusta según tu imagen */
+    background-image: url('/imagenes/flower-6.png'); /* ⚠️ ruta en minúsculas */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    z-index: -1;  
-}
-.sintillo h1 {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    margin-top: -19px;
+  }
+  
+  /* Bloque de título centrado */
+  .section-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+margin-top: -40px;
+    text-align: center;
+    z-index: 1;
+  }
+  
+  .section-title h1,
+  .section-title h2 {
     margin: 0;
     font-family: var(--font-title);
     font-weight: 500;
     font-style: italic;
-    font-size: 70px;
-    white-space: nowrap;
-    margin-top: 50px;
-    background: linear-gradient(to right, #d8bff8, #e6ccff, #ba9fd3, #e6ccff, #d8bff8);
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    background: linear-gradient(to right,#d8bff8,#e6ccff,#ba9fd3,#e6ccff,#d8bff8);
     -webkit-background-clip: text;
     color: transparent;
     animation: shine 1.5s infinite linear;
-    padding: 10px;
-}
-.sintillo h2 {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    margin: 0;
-    font-family: var(--font-title);
-    font-weight: 500;
-    font-style: italic;
-    font-size: 90px;
-    white-space: nowrap;
-    margin-top: 200px;
-    background: linear-gradient(to right, #d8bff8, #e6ccff, #ba9fd3, #e6ccff, #d8bff8);
-    -webkit-background-clip: text;
-    color: transparent;
-    animation: shine 1.5s infinite linear;
-    padding: 10px;
-} 
-.section, .section-filter, .section-quote{
-    padding: 0;
-    transform: translateY(20px);
-    animation: fadeIn var(--scroll-animation-duration) ease-in forwards;
-}
-.section h1{
-    font-family: var(--font-title);
-    padding: 15px;
-    font-weight: 400;
-    font-style: italic;
-    font-size: 35px;
-    margin-top: -10px;
-    margin-bottom: -10px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(to right, #d8bff8, #e6ccff, #f3e6ff, #e6ccff, #d8bff8);
-    -webkit-background-clip: text;
-    color: transparent;
-}
+    padding: 28px;
+  }
+  
+  /* Tamaños adaptables */
+  .section-title h1 {
+    font-size: 60px;
+  }
+  
+  .section-title h2 {
+    font-size: 75px;
+  }
+  
 .section-main {
     position: relative;
     margin: 0;
@@ -287,7 +251,7 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    margin-top: -90px;
+    margin-top: 0;
 }
 .section-cerezo00::before {
     content: "";
