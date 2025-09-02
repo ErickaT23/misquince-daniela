@@ -10,7 +10,7 @@
     <meta property="og:description" content="Te invito a mis quince, con amor Daniela.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="/style.css">
-    <link rel="preload" href="/imagenes/sintillo.png" as="image">
+    <link rel="preload" href="/imagenes/flower-6.png" as="image">
      <!-- Preconnect and Load Fonts -->
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,7 +37,6 @@
             <h1>Mis XV</h1>
             <h2>Daniela</h2>
         </div>
-    <!-- Sección de Foto -->
         <!-- Contador de Fecha Regresiva -->
         <div class="section-countdown fade-in-element">
             <h1>¡Están invitados!</h1>
@@ -63,7 +62,7 @@
             </div>
         </div>  
         <!--div cerezo-->
-        <div class="section-cerezo0"></div>   
+        <div class="section-cerezo0"></div>  
          <!-- Bendición de Padres -->
          <div class="section-b fade-in-element">
             <p>Con la bendición de Dios y de mis padres</p>
@@ -71,6 +70,26 @@
             <h2>&</h2>
             <h1>Gabriela Calvillo</h1>
         </div>
+        <!-- Nombre de Invitados y Cantidad de Pases -->
+        <div class="section-guest fade-in-element">
+                            <h1>Los invitamos con mucho cariño</h1>
+                            <h2 id="nombreInvitado"></h2>
+                            <h3 id="cantidadPases"></h3>
+        </div>
+        <!-- Confirmación -->
+        <div class="section fade-in-element">
+                            <h3>Confirmar Asistencia</h3>
+                            <lord-icon
+                              src="https://cdn.lordicon.com/unkasvor.json"
+                              trigger="loop"
+                              delay="2000"
+                              stroke="light"
+                              colors="primary:#b38fcc,secondary:#9273ab"
+                              style="width:200px;height:200px">
+                            </lord-icon>
+                            <p>Para nosotros es muy importante que confirmes tu asistencia lo antes posible, o bien indicarnos si no podrá acompañarnos.</p>
+                            <button onclick="confirmarAsistencia()">Confirmar</button>
+        </div> 
         <!--div cerezo-->
         <div class="section-cerezo000"></div>   
         <!-- Itinerario -->
@@ -122,26 +141,6 @@
         </div>
         <!--div cerezo-->
         <div class="section-cerezo"></div>
-                   <!-- Nombre de Invitados y Cantidad de Pases -->
-                   <div class="section-guest fade-in-element">
-                    <h1>Los invitamos con mucho cariño</h1>
-                    <h2 id="nombreInvitado"></h2>
-                    <h3 id="cantidadPases"></h3>
-                </div>
-                <!-- Confirmación -->
-                <div class="section fade-in-element">
-                    <h3>Confirmar Asistencia</h3>
-                    <lord-icon
-                      src="https://cdn.lordicon.com/unkasvor.json"
-                      trigger="loop"
-                      delay="2000"
-                      stroke="light"
-                      colors="primary:#b38fcc,secondary:#9273ab"
-                      style="width:200px;height:200px">
-                    </lord-icon>
-                    <p>Para nosotros es muy importante que confirmes tu asistencia lo antes posible, o bien indicarnos si no podrá acompañarnos.</p>
-                    <button onclick="confirmarAsistencia()">Confirmar</button>
-                </div>
         <!-- Regalos -->
         <div class="section-gifts fade-in-element">
             <lord-icon class="icon-gift"
@@ -155,6 +154,26 @@
             <h2>Lluvia de Sobres</h2>
             <p>El mejor regalo es tu presencia, pero si deseas obsequiarme algo, un detalle en efectivo me ayudará a cumplir mis sueños.</p>
         </div>
+        <!-- Playlist -->
+        <div class="section-playlist fade-in-element">
+                    <h2>Playlist</h2>
+                    <lord-icon
+                      src="https://cdn.lordicon.com/vvlnxtgv.json"
+                      trigger="loop"
+                      delay="2000"
+                      stroke="light"
+                      colors="primary:#b38fcc,secondary:#9273ab"
+                      style="width:200px;height:200px">
+                    </lord-icon>
+                    <p>Ayúdame a armar la playlist con tus canciones favoritas e inolvidables para mi fiesta.</p>
+                    <button
+                      onclick="window.open('https://open.spotify.com/playlist/2ZAQ3vS6oqffjbTb05R5Zr?si=c8b040c6d83341c3&pt=ca74b026231d6523883c81ec293db06b', '_blank', 'noopener')"
+                    >
+                      Abrir playlist en Spotify
+                    </button>
+        </div>
+        <!--div cerezo-->
+        <div class="section-cerezo1"></div>   
          <!--dresscode-->
          <div class="section fade-in-element">
             <h2>Dress Code</h2>
@@ -168,12 +187,10 @@
         </lord-icon>
             <p>Formal con tenis, los colores lila y morados están reservados completamente para la quinceañera </p>
         </div>
-        <!--div cerezo-->
-        <div class="section-cerezo1"></div>   
-       <!-- Galería de Fotos -->
+                <!--div cerezo-->
+        <div class="section-cerezo2"></div>   
         <!-- Buenos deseos -->
-        <!-- Buenos deseos -->
-<section id="wishes-section" class="fade-in-element">
+        <section id="wishes-section" class="fade-in-element">
     <lord-icon
     src="https://cdn.lordicon.com/vgyuhnxn.json"
     trigger="loop"
@@ -188,29 +205,9 @@
       <textarea id="wish-message" placeholder="Tu mensaje"></textarea>
       <button id="submit-wish">Enviar</button>
     </div>
-  </section>
-    
-        <!-- Playlist -->
-<div class="section fade-in-element">
-    <h2>Playlist</h2>
-    <lord-icon
-      src="https://cdn.lordicon.com/vvlnxtgv.json"
-      trigger="loop"
-      delay="2000"
-      stroke="light"
-      colors="primary:#b38fcc,secondary:#9273ab"
-      style="width:200px;height:200px">
-    </lord-icon>
-    <p>Ayúdame a armar la playlist con tus canciones favoritas e inolvidables para mi fiesta.</p>
-    <button
-      onclick="window.open('https://open.spotify.com/playlist/2ZAQ3vS6oqffjbTb05R5Zr?si=c8b040c6d83341c3&pt=ca74b026231d6523883c81ec293db06b', '_blank', 'noopener')"
-    >
-      Abrir playlist en Spotify
-    </button>
-  </div>
-  
-  <!-- Recuerdos / Álbum Digital -->
-<div class="section-filter fade-in-element">
+        </section>
+        <!-- Recuerdos / Álbum Digital -->
+        <div class="section-filter fade-in-element">
     <h2>¡Hagamos las memorias eternas!</h2>
   
     <lord-icon
@@ -236,9 +233,7 @@
          Subir fotos al Álbum
       </a>
     </div>
-  </div>
-  
-  
+        </div>
         <!-- Imagen -->
         <div class="section fade-in-element">
             <img src="/imagenes/H2.jpg" alt="Foto de la quinceañera" width="100%" loading="lazy">

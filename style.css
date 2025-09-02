@@ -243,7 +243,6 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    margin-top: -100px;
 }
 .section-cerezo00{
     position: relative;
@@ -286,7 +285,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('Imagenes/flower-2.png');
+    background-image: url('Imagenes/flower-7.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -310,7 +309,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('/Imagenes/flower-6.png');
+    background-image: url('/Imagenes/flower-5.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -362,6 +361,29 @@ body {
     background-repeat: no-repeat;
     z-index: -1;
 }
+.section-cerezo2{
+    position: relative;
+    width: 100%;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.section-cerezo2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/Imagenes/flower-3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
 .section-b p{
    color: var(--color-2);
    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
@@ -401,7 +423,7 @@ body {
     color: white;                  /* morado fuerte para contraste */
     padding: 20px 20px;
     font-family: var(--font-title);
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 400;
     margin-top: -5px;
 }
@@ -411,12 +433,12 @@ body {
     color: white;                  /* morado fuerte para contraste */
     padding: 20px 20px;
     font-family: var(--font-title);
-    font-size: 50px;    
+    font-size: 35px;    
     margin-top: -50px;
     font-weight: 400;
 }
   
-.section h2, .section-gifts h2, .section h3, .section-filter h2{
+.section h2, .section-gifts h2, .section h3, .section-filter h2, .section-playlist h2{
     font-family: var(--font-title);
     padding: 15px;
     font-weight: 400;
@@ -429,7 +451,16 @@ body {
     -webkit-background-clip: text;
     color: transparent;
 }
-.section p, .section-gifts p, .section-filter p{
+.section-filter{
+    background-color: #faf2ff80;
+    margin-bottom: -22px;
+}
+.section-playlist{
+    background-color: #faf2ff80;
+    margin-bottom: -5px;
+    margin-top: 20px;
+}
+.section p, .section-gifts p, .section-filter p, .section-playlist p{
     font-family: var(--font-1);
     font-style: italic;
     font-weight: 400;
@@ -716,6 +747,7 @@ footer {
     font-style: italic;
     font-size: 1.1em;
     transition: transform .15s ease, box-shadow .15s ease, background-color .2s;
+    margin-bottom: 20px;
   }
   
   .upload-btn:hover {
