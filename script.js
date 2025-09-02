@@ -142,7 +142,7 @@ function closeModal(event) {
 
 // Función para confirmar la asistencia (maneja singular/plural)
 // Configuración del Google Form
-const GF_BASE = "https://docs.google.com/forms/d/e/1FAIpQLScIbR_LCyOTg7IMdhJ58GGWXbSAxlLcgHcCzpGb-DyQGxttSg/viewform";
+const GF_BASE = "https://forms.gle/dQNtwVACj9te2VuV8";
 const GF_FIELD_NOMBRE = "entry.1297710131";   // <-- tu campo "Nombre"
 const GF_FIELD_PASES  = "entry.1099367965";   // <-- tu campo "Pases"
 
