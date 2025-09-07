@@ -141,7 +141,7 @@ function closeModal(event) {
     });
 
 // Link directo (puede ser el corto o el largo)
-const GF_BASE = "https://forms.gle/Vz3UqgMaDtqScJEU6";
+const GF_BASE = "https://docs.google.com/forms/d/e/1FAIpQLScIbR_LCyOTg7IMdhJ58GGWXbSAxlLcgHcCzpGb-DyQGxttSg/viewform?usp=pp_url";
 
 // Confirmación → abre el formulario en nueva pestaña
 function confirmarAsistencia() {
