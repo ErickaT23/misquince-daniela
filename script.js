@@ -140,42 +140,14 @@ function closeModal(event) {
         });
     });
 
-// Función para confirmar la asistencia (maneja singular/plural)
-// Configuración del Google Form
-const GF_BASE = "https://forms.gle/foAht83JzyYRnRHb8";
-const GF_FIELD_NOMBRE = "entry.1297710131";   // <-- tu campo "Nombre"
-const GF_FIELD_PASES  = "entry.1099367965";   // <-- tu campo "Pases"
+// Link directo (puede ser el corto o el largo)
+const GF_BASE = "https://forms.gle/Vz3UqgMaDtqScJEU6";
 
-// Obtiene nombre y pases del invitado
-function obtenerDatosInvitado() {
-  const nombreDOM = document.getElementById('nombreInvitado')?.innerText?.trim();
-  const pasesText = document.getElementById('cantidadPases')?.innerText || '';
-  const match = pasesText.match(/(\d+)/);
-  let pases = match ? parseInt(match[1], 10) : undefined;
-
-  const invitado = window.__invitadoActual || {};
-  const nombre = nombreDOM || invitado.nombre || 'Invitado';
-  if (!Number.isFinite(pases)) pases = Number.isFinite(invitado.pases) ? invitado.pases : 1;
-
-  return { nombre, pases };
-}
-
-// Construye la URL prellenada
-function construirURLPrefill({ nombre, pases }) {
-  const params = new URLSearchParams({
-    usp: "pp_url",
-    [GF_FIELD_NOMBRE]: nombre,
-    [GF_FIELD_PASES]: String(pases)
-  });
-  return `${GF_BASE}?${params.toString()}`;
-}
-
-// Redirige al form en nueva pestaña
+// Confirmación → abre el formulario en nueva pestaña
 function confirmarAsistencia() {
-  const { nombre, pases } = obtenerDatosInvitado();
-  const url = construirURLPrefill({ nombre, pases });
-  window.open(url, '_blank');
+  window.open(GF_BASE, '_blank');
 }
+
 
   
       
